@@ -162,7 +162,7 @@ print(df_features)
 ggplot(df_features, aes(x=reorder(Feature, Importance), y=Importance)) +
   geom_bar(stat = "identity") + 
   coord_flip() +
-  labs(x="Feature", y="Importance", title="a bar chart about the importance of feature")
+  labs(x="Feature", y="Importance", title="A bar chart about the importance of feature")
 
 # plot the ROC curve
 label <- test_task$truth() #real label 
@@ -174,7 +174,7 @@ ggplot(data = data.frame(tpr = roc$sensitivities, fpr = roc$specificities), aes(
   geom_line(color = "blue", linewidth = 1) +
   geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
   labs(
-    title = paste("ROC Curve (AUC =", round(auc, 3), ")"),
+    title = paste("ROC Curve of random forest (AUC =", round(auc, 3), ")"),
     x = "False Positive Rate",
     y = "True Positive Rate"
   ) 
